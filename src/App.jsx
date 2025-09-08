@@ -30,6 +30,7 @@ import Forms from "./components/dashboard/form/Forms.jsx";
 import Blogs from "./pages/blogs/Blogs.jsx";
 import SingleBlog from "./pages/blogs/SingleBlog.jsx";
 import AddBlogs from "./components/dashboard/blogs/AddBlogs.jsx";
+import Ncc from "./pages/ncc/Ncc.jsx";
 
 function LayoutWrapper() {
   const location = useLocation();
@@ -42,6 +43,7 @@ function LayoutWrapper() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/ncc" element={<Ncc />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<SingleBlog />} />
@@ -69,7 +71,7 @@ function LayoutWrapper() {
       </Routes>
 
       {!hideLayout && <Footer />}
-      {!hideLayout && <FormModal />}
+      {/* {!hideLayout && <FormModal />} */}
     </>
   );
 }

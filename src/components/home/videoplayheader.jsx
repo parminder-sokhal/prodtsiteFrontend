@@ -11,9 +11,10 @@ const VideoPlayHeader = () => {
         muted
         preload="auto"
         className="w-full h-full object-fit"
+        poster="/images/ncc.webp"
       >
         <source
-          src="https://dl.dropboxusercontent.com/scl/fi/m2jta610nijmt8fxx6mzj/drrobinbgvideo.mp4?rlkey=icd2o2seoxqkereex3ehzm9cf&st=ipe57lzo"
+          // src="https://dl.dropboxusercontent.com/scl/fi/m2jta610nijmt8fxx6mzj/drrobinbgvideo.mp4?rlkey=icd2o2seoxqkereex3ehzm9cf&st=ipe57lzo"
           type="video/mp4"
         />
         Your browser does not support the video tag.

@@ -13,14 +13,11 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           {/* About Hospital */}
           <div className="lg:w-1/3 transform hover:scale-105 transition duration-300 ease-in-out">
-            <h3 className="text-xl font-semibold mb-4">About Hospital</h3>
+            <h3 className="text-xl font-semibold mb-4">About </h3>
             <p className="text-sm text-justify">
-              To provide compassionate, evidence-based respiratory care using
-              the latest diagnostic and therapeutic technologies. Dr. Robin
-              Gupta envisions making advanced pulmonary services like
-              bronchoscopy, EBUS, and sleep medicine accessible to all, while
-              educating patients and empowering them to manage chronic lung
-              diseases with confidence and clarity.
+              we proivde the best dress in the market. We have a wide range of
+              dresses for all occasions including casual, formal, party wear,
+              traditional, and seasonal collections. Our dresses are made from
             </p>
           </div>
 
@@ -46,11 +43,11 @@ const Footer = () => {
             <div>
               <p className="text-md font-semibold mb-1">Contact Us</p>
               <Link
-                to="tel:+919815490081"
+                to="tel:+91123456789"
                 className="flex justify-center items-center space-x-2 hover:text-black"
               >
                 <FaPhoneAlt className="text-lg" />
-                <span>+91 9888505080</span>
+                <span>+91 123456789</span>
               </Link>
             </div>
           </div>
@@ -66,34 +63,25 @@ const Footer = () => {
               >
                 <FaMapMarkerAlt className="text-lg" />
                 <span>
-                  Dr Robin's Chest Clinic, DSS 272, Sector 20, Panchkula
+                  asdfg fsgdhfgjh chd
                 </span>
               </Link>
-              <Link
-                to="https://maps.app.goo.gl/ehutqjqNhS6fcEWj7"
-                target="_blank"
-                className="flex items-center space-x-2 hover:text-black"
-              >
-                <FaMapMarkerAlt className="text-lg" />
-                <span>
-                 Dr. Robin Gupta | Paras Hospital - Panchkula
-                </span>
-              </Link>
+              
 
               <Link
-                to="tel:+919872334233"
+                to="tel:+91123456789"
                 className="flex items-center space-x-2 hover:text-black"
               >
                 <FaPhoneAlt className="text-lg" />
-                <span>+91 9888505080</span>
+                <span>+91 123456789</span>
               </Link>
 
               <Link
-                to="mailto:drrobingmc@yahoo.com"
+                to="mailto:23456789@yahoo.com"
                 className="flex items-center space-x-2 hover:text-black"
               >
                 <FaEnvelope className="text-lg" />
-                <span>drrobingmc@yahoo.com</span>
+                <span>123456789@yahoo.com</span>
               </Link>
             </div>
           </div>
@@ -104,7 +92,7 @@ const Footer = () => {
         <div className=" text-center bg-white text-black py-4">
           <p className="text-sm px-4">
             <Link to="/dashboard" className="hover:text-gray-700">
-              DR. Robin Gupta&nbsp;
+              example&nbsp;
             </Link>
             © 2025 All Rights Reserved. | Designed & Developed by:&nbsp;
             <a

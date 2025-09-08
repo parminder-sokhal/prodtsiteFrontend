@@ -3,7 +3,7 @@ import React from "react";
 import VideoPlayHeader from "../../components/home/videoplayheader.jsx";
 import Treatment from "../../components/home/Treatment.jsx";
 import OurApproach from "../../components/home/ourapproach.jsx";
-import Doctors from "../../components/home/Doctors.jsx";
+import Dresses from "../../components/home/Dresses.jsx";
 import PhotoGallery from "../../components/home/PhotoGallery.jsx";
 import TrendingYoutube from "../../components/home/TrendingYoutube.jsx";
 import InstagramSlider from "../../components/home/InstagramSlider.jsx";
@@ -15,12 +15,12 @@ function Home() {
   return (
     <>
       <VideoPlayHeader />
-      <OurServices />
-      <OurApproach />
+      {/* <OurServices /> */}
+      {/* <OurApproach /> */}
       {/* <SpecialitiesSlider/>    */}
-      <Doctors />
-      <PatientReview />
-      <Treatment />
+      <Dresses />
+      {/* <PatientReview /> */}
+      {/* <Treatment /> */}
       {/* <OurFacility/> */}
       <PhotoGallery />
       {/* <TrendingYoutube/> */}

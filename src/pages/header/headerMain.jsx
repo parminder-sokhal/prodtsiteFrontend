@@ -109,7 +109,7 @@ function HeaderMain() {
             <img
               src="/logo/RobinlogoRemoveBG.png"
               className="h-16"
-              alt="Dr.RobinGupta Logo"
+              alt="Logo"
             />
           </Link>
 
@@ -334,7 +334,7 @@ function HeaderMain() {
                   onClick={toggleNavbarDropdownservices}
                   className="flex items-center justify-between w-full py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:p-0"
                 >
-                  Treatments
+                  2345
                   <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${isDropdownNavbarOpenservices ? "rotate-180" : ""}`}
                     fill="none"
@@ -350,7 +350,7 @@ function HeaderMain() {
                   </svg>
                 </button>
 
-                <div
+                {/* <div
                   onMouseLeave={handleNavbarDropdownLeaveservices}
                   onClick={handleNavbarDropdownLeaveservices}
                   className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-auto absolute mt-2 transition-all duration-300 ease-in-out transform ${
@@ -536,7 +536,7 @@ function HeaderMain() {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </li>
 
               <li onMouseEnter={handleNavbarDropdownHoverservicestwo}>
@@ -544,7 +544,7 @@ function HeaderMain() {
                   onClick={toggleNavbarDropdownservicestwo}
                   className="flex items-center justify-between w-full py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:p-0"
                 >
-                  Procedures
+                  example
                   <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${isDropdownNavbarOpenservicestwo ? "rotate-180" : ""}`}
                     fill="none"
@@ -560,7 +560,7 @@ function HeaderMain() {
                   </svg>
                 </button>
 
-                <div
+                {/* <div
                   onMouseLeave={handleNavbarDropdownLeaveservicestwo}
                   onClick={handleNavbarDropdownLeaveservicestwo}
                   className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-auto absolute mt-2 transition-all duration-300 ease-in-out transform ${
@@ -755,7 +755,7 @@ function HeaderMain() {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </li>
 
               {/* <li onMouseEnter={handleNavbarDropdownHoverservicestwo}>
@@ -994,14 +994,14 @@ function HeaderMain() {
                   className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-auto px-4 absolute mt-2 ${isDropdownNavbarOpen ? "block" : "hidden"}`}
                 >
                   <ul className="py-2 text-sm text-black">
-                    <li>
+                    {/* <li>
                       <Link
                         to="/Pictures"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
                         Pictures Gallery
                       </Link>
-                    </li>
+                    </li> */}
                     {/* <li>
                       <Link
                         to="/Youtube"
@@ -1042,10 +1042,10 @@ function HeaderMain() {
           {/* Desktop CTA */}
           <div className="hidden lg:block text-xl">
             <Link
-              to="/about#qualifications"
+              to="/"
               className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition duration-300"
             >
-              Book Appointment
+              Buy 
             </Link>
           </div>
 
