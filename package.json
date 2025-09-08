@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "overrides": {
+  "functional-blue-black-tree": "1.0.0"
+},
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
