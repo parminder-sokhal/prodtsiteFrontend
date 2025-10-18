@@ -47,10 +47,6 @@ function LayoutWrapper() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<SingleBlog />} />
-        {/* <Route path="/management" element={<Management />} /> */}
-        {/* <Route path="/doctors" element={<Doctors />} /> */}
-        {/* <Route path="/doctor/:id" element={<DoctorProfile />} /> */}
-        {/* <Route path="/appointment" element={<DoctorAppointment />} /> */}
         <Route path="/signin" element={<SignIn />} />
 
         {/* Private dashboard route with nested child routes */}
@@ -58,20 +54,13 @@ function LayoutWrapper() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<WelcomeDashboard />} />
             <Route path="Blogs" element={<AddBlogs />} />
-            {/* <Route path="AddDoctor" element={<AddDoctor />} /> */}
-            {/* <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} /> */}
-            {/* <Route path="GetAllOfflinePayments" element={<GetAllOfflinePayments />} /> */}
-            <Route path="Links" element={<AddLinks />} />
-            <Route path="Forms" element={<Forms />} />
           </Route>
         </Route>
 
-        {TreatmentRoutes}
         {Media}
       </Routes>
 
       {!hideLayout && <Footer />}
-      {/* {!hideLayout && <FormModal />} */}
     </>
   );
 }
