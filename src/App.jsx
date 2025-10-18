@@ -11,30 +11,19 @@ import HeaderMain from "./pages/header/headerMain.jsx";
 import Home from "./pages/home/Home";
 import About from "./pages/about/about.jsx";
 import Footer from "./pages/footer/footer.jsx";
-import Doctors from "./pages/Doctor/meetOurDoctor.jsx";
-import TreatmentRoutes from "./pages/home/treatment.jsx";
 import Media from "./pages/header/media.jsx";
-import DoctorProfile from "./components/doctor/doctorprofile.jsx";
-import DoctorAppointment from "./pages/Doctor/doctorAppointment.jsx";
 import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
 import Dashboard from "./pages/dashboard/dashboard.jsx";
 import WelcomeDashboard from "./pages/dashboard/WelcomeDashboard.jsx";
 import SignIn from "./pages/SignIn.jsx";
-import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
-import GetAllPaymentDetails from "./components/dashboard/payment/GetAllPaymentDetails.jsx";
-import GetAllOfflinePayments from "./components/dashboard/payment/GetAllOfflinePayments.jsx";
-import AddLinks from "./components/dashboard/Links/AddLinks.jsx";
-// import Management from "./pages/management/Management.jsx";
-import FormModal from "./pages/form/FormModal.jsx";
-import Forms from "./components/dashboard/form/Forms.jsx";
+import AddBlogs from "./components/dashboard/blogs/AddBlogs.jsx";
 import Blogs from "./pages/blogs/Blogs.jsx";
 import SingleBlog from "./pages/blogs/SingleBlog.jsx";
-import AddBlogs from "./components/dashboard/blogs/AddBlogs.jsx";
-import Ncc from "./pages/ncc/Ncc.jsx";
+import DressDetail from "./pages/dresses/DressDetail.jsx";
 
 function LayoutWrapper() {
   const location = useLocation();
-  const hideLayout = location.pathname.startsWith("/dashboard"); // you can add more paths here
+  const hideLayout = location.pathname.startsWith("/dashboard");
 
   return (
     <>
@@ -43,13 +32,20 @@ function LayoutWrapper() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ncc" element={<Ncc />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/signin" element={<SignIn />} />
 
-        {/* Private dashboard route with nested child routes */}
+        <Route path="/ncc" element={<DressDetail />} />
+        <Route path="/armed-forces" element={<DressDetail />} />
+        <Route path="/security-guard" element={<DressDetail />} />
+        <Route path="/driver-uniform" element={<DressDetail />} />
+        <Route path="/hotel-staff" element={<DressDetail />} />
+        <Route path="/hospital-staff" element={<DressDetail />} />
+        <Route path="/industrial-worker" element={<DressDetail />} />
+        <Route path="/:slug" element={<DressDetail />} />
+
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<WelcomeDashboard />} />
