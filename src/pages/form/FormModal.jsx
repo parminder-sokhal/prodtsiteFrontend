@@ -3,18 +3,29 @@ import { useDispatch } from "react-redux";
 import { createForm } from "../../redux/actions/formActions";
 import "./FormModal.css";
 
-function FormModal() {
+function FormModal({ isOpen = false, onClose = null, uniformType = "" }) {
   const dispatch = useDispatch();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(isOpen);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    message: "",
+    message: uniformType ? `Inquiry about ${uniformType}` : "",
   });
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
+    if (isOpen !== undefined) {
+      setShow(isOpen);
+      if (isOpen && uniformType) {
+        setFormData((prev) => ({
+          ...prev,
+          message: `Inquiry about ${uniformType}`,
+        }));
+      }
+      return;
+    }
+
     let scrollTimeout;
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -30,7 +41,7 @@ function FormModal() {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(scrollTimeout);
     };
-  }, []);
+  }, [isOpen, uniformType]);
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -59,16 +70,26 @@ function FormModal() {
 
     dispatch(createForm(formData));
 
-    setSuccess(true); // Show success message
+    setSuccess(true);
     setFormData({ name: "", phone: "", message: "" });
 
     setTimeout(() => {
       setSuccess(false);
-      setShow(false); // Hide modal
+      if (onClose) {
+        onClose();
+      } else {
+        setShow(false);
+      }
     }, 2000);
   };
 
-  const closeModal = () => setShow(false);
+  const closeModal = () => {
+    if (onClose) {
+      onClose();
+    } else {
+      setShow(false);
+    }
+  };
 
   if (!show) return null;
 
