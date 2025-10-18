@@ -37,13 +37,6 @@ function LayoutWrapper() {
         <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/signin" element={<SignIn />} />
 
-        <Route path="/ncc" element={<DressDetail />} />
-        <Route path="/armed-forces" element={<DressDetail />} />
-        <Route path="/security-guard" element={<DressDetail />} />
-        <Route path="/driver-uniform" element={<DressDetail />} />
-        <Route path="/hotel-staff" element={<DressDetail />} />
-        <Route path="/hospital-staff" element={<DressDetail />} />
-        <Route path="/industrial-worker" element={<DressDetail />} />
         <Route path="/:slug" element={<DressDetail />} />
 
         <Route element={<PrivateRoute />}>
