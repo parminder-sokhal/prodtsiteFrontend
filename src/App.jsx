@@ -9,7 +9,6 @@ import "./App.css";
 import Headertop from "./pages/header/headertop.jsx";
 import HeaderMain from "./pages/header/headerMain.jsx";
 import Home from "./pages/home/Home";
-import About from "./pages/about/about.jsx";
 import Footer from "./pages/footer/footer.jsx";
 import Media from "./pages/header/media.jsx";
 import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
@@ -32,7 +31,6 @@ function LayoutWrapper() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/signin" element={<SignIn />} />
